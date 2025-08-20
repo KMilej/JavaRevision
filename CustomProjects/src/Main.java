@@ -6,7 +6,10 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Hello in Basic Program with all small task to make code revision what task do you want to see?");
+        System.out.println("Hello in Basic Program with small tasks for revision.");
+        System.out.println("choose task");
+        System.out.println("1) nameSurname, 2) Calculator");
+
 
         int choice = scanner.nextInt();
         scanner.nextLine();

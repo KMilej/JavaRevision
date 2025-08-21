@@ -11,7 +11,7 @@ public class Main {
 
             System.out.println("Hello in Basic Program with small tasks for revision.");
             System.out.println("choose task");
-            System.out.println("1) nameSurname, 2) Calculator, 3) Math.round, 4) FinanceOperation, 5) String option, 6)BooleanOperation, 7), Operators, 8) && and ||, 9) conditional instructions, 10), 11)choose operation, 12) for loop, 13) while loop  50) Exit program");
+            System.out.println("1) nameSurname, 2) Calculator, 3) Math.round, 4) FinanceOperation, 5) String option, 6)BooleanOperation, 7), Operators, 8) && and ||, 9) conditional instructions, 10), 11)choose operation, 12) for loop, 13) while loop, 14) for loop 50) Exit program");
 
             int choice = scanner.nextInt();
             scanner.nextLine();
@@ -58,6 +58,10 @@ public class Main {
                 case 13:
                     Task13 task13 = new Task13();
                     task13.task13();
+                case 14:
+                    Task14 task14 = new Task14();
+                    task14.task14();
+
                 case 50:
                     System.out.println("Exiting program");
                     running = false;

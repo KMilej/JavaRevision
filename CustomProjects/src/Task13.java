@@ -76,6 +76,58 @@ public class Task13 {
         System.out.println("Sum of even numbers: " + even);
         System.out.println("Sum of odd numbers: " + odd);
 
+        // task6 – liczby pierwsze w przedziale
+        System.out.println("\n--- Task 6 ---");
+        System.out.println("Enter start of range:");
+        int start = scanner.nextInt();
+        System.out.println("Enter end of range:");
+        int end = scanner.nextInt();
+
+        for (int i = start; i <= end; i++) {
+            if (isPrime(i)) {
+                System.out.print(i + " ");
+            }
+        }
+        System.out.println();
+
+        // task7 – potęgowanie bez Math.pow()
+        System.out.println("\n--- Task 7 ---");
+        System.out.println("Enter base A:");
+        int A = scanner.nextInt();
+        System.out.println("Enter exponent B:");
+        int B = scanner.nextInt();
+
+        long result = 1;
+        for (int i = 0; i < B; i++) {
+            result *= A;
+        }
+        System.out.println(A + "^" + B + " = " + result);
+
+        // task8 – piramida
+        System.out.println("\n--- Task 8 ---");
+        System.out.println("Enter number of rows for pyramid:");
+        int rows = scanner.nextInt();
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = i; j < rows; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+
+    // pomocnicza metoda do sprawdzania liczb pierwszych
+    private static boolean isPrime(int n) {
+        if (n < 2) return false;
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) return false;
+        }
+        return true;
 
     }
 }

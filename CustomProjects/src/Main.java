@@ -49,6 +49,9 @@ public class Main {
                 case 10:
                     Task10 task10 = new Task10();
                     task10.task10();
+                case 11:
+                    Task11 task11 = new Task11();
+                    task11.task11();
                 case 50:
                     System.out.println("Exiting program");
                     running = false;

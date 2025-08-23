@@ -12,7 +12,7 @@ public class Main {
             System.out.println("Hello in Basic Program with small tasks for revision.");
             System.out.println("choose task");
             System.out.println("1) nameSurname, 2) Calculator, 3) Math.round, 4) FinanceOperation, 5) String option, 6)BooleanOperation, 7), Operators, 8) && and ||, 9) conditional instructions, 10), 11)choose operation, 12) for loop, 13) while loop, 14) for loop, 15) ArrayList, 50) Exit program");
-            System.out.println("16)HashSet ");
+            System.out.println("16)HashSet, 17) ArrayList ,18) palindrom , 19) Casting prymitiveTypes, 20) Text Block, 21) name to Array, 22) Hashmap count ");
 
 
             int choice = scanner.nextInt();
@@ -75,7 +75,18 @@ public class Main {
                 case 18:
                     Task18 task18 = new Task18();
                     task18.task18();
-
+                case 19:
+                    Task19 task19 = new Task19();
+                    task19.task19();
+                case 20:
+                    Task20 task20 = new Task20();
+                    task20.task20();
+                case 21:
+                    Task21 task21 = new Task21();
+                    task21.task21();
+                case 22:
+                    Task22 task22 = new Task22();
+                    task22.task22();
 
                 case 50:
                     System.out.println("Exiting program");

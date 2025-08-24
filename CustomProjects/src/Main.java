@@ -99,6 +99,10 @@ public class Main {
                 case 26:
                     Task26 task26 = new Task26();
                     task26.task26();
+                case 27:
+                    Task27 task27 = new Task27();
+                    task27.task27();
+
 
                 case 50:
                     System.out.println("Exiting program");

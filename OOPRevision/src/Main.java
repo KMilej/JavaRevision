@@ -33,6 +33,15 @@ public class Main {
             case 3 -> {
                 PasswordValidator passwordValidator = new PasswordValidator();
                 passwordValidator.validatorPassword("elo!");
+            }
+            case 4 -> {
+                MaxSpeed maxSpeed = new MaxSpeed(0, 60, 450);
+                maxSpeed.drive(120, 100);
+                System.out.println(maxSpeed);
+                maxSpeed.addFuel(100);
+                System.out.println(maxSpeed);
+                maxSpeed.drive(20, 20);
+                System.out.println(maxSpeed);
 
             }
         }

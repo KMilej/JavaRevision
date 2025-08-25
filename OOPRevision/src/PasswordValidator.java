@@ -10,7 +10,7 @@ public class PasswordValidator {
         }
     }
 
-    private void validateSpecialCharacters(String password) {
+    private void validateSpecialCharacters(String password) {   //ukrywamy po co komu to tylko 1 metode udostepniamy
         if (!(password.contains("#") || password.contains("%"))) {
             System.out.println("password dont have special characters");
         }

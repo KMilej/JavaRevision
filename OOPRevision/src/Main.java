@@ -22,13 +22,17 @@ public class Main {
                 kamil.setEmail("Kmil@gmailcom");
                 kamil.sendEmail("bardzo lubie jesc pizze");
                 Edyta.printUserInformation();
+                Edyta.setAge(15);
             }
             case 2 -> {
                 Car mojCar = new Car("Toyota", "Focus", 2019, "Blue");
                 Car nieMojCar = new Car("Toyota", "Puma", "Red");
                 System.out.println(mojCar);
                 System.out.println(nieMojCar);
-
+            }
+            case 3 -> {
+                PasswordValidator passwordValidator = new PasswordValidator();
+                passwordValidator.validatorPassword("elo!");
 
             }
         }

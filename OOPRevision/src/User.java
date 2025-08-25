@@ -32,6 +32,13 @@ public class User {
         this.email = email;
     }
 
+    public void setAge(int age) {
+        if (age < 17) {
+            System.out.println("this is not correct age!");
+        }
+        this.age = age;
+    }
+
     public void printUserInformation() {
         System.out.println("name is " + name);
         System.out.println("Age is " + age);

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -7,7 +8,7 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("OOP Programming Menu");
-        System.out.println("1). basic User Class, 2).Car app, 3) PasswordValidator, 4) Max Speed, 5) AddFuel, 6) user/mod/admin, 7) ");
+        System.out.println("1). basic User Class, 2).Car app, 3) PasswordValidator, 4) Max Speed, 5) AddFuel, 6) user/mod/admin, 7)Interface, 8)WrapperClass ");
         int choice = scanner.nextInt();
 
         switch (choice) {
@@ -84,12 +85,38 @@ public class Main {
 
                 LenghtPasswordValidator lenghtPasswordValidator = new LenghtPasswordValidator();
                 SpecialCharactersPasswordValidator specialCharactersPasswordValidator = new SpecialCharactersPasswordValidator();
+                // also can be do like that
+                PasswordValidatorr validatorLenght = new LenghtPasswordValidator();
+                PasswordValidatorr validatorSpecial = new SpecialCharactersPasswordValidator();
 
                 alladyn.setPassword("owoce", lenghtPasswordValidator);
                 alladyn.setPassword("owoce", specialCharactersPasswordValidator);
+                System.out.println("2nd option");
+                alladyn.setPassword("mikuś", validatorLenght);
+                alladyn.setPassword("mikuś", validatorSpecial);
+            }
+            case 8 -> {
+                int[] numbers = new int[]{1, 2, 3, 4};
+                System.out.println(numbers[1]);
+
+                List<Integer> number2 = new ArrayList<>();
+                Integer a = 2;   // Integer pisany w ten sposob tworzy okiekt tak jak int , tyle ze int to jest typ prymitywny , tak samo jest dla Double i double
+                number2.add(1);
+                number2.add(2);
+                number2.add(3);
+                number2.add(4);
+
+                System.out.println(number2.get(0));
+                //uzywanie bez uzywania int tylko Ingeter nazywamy AutoBoxingiem
+            }
+            case 9 -> {
+                Samochod samochod = new Samochod();
+                traktor traktor = new traktor();
+                samochod.hello();
+                traktor.hello();
+
             }
 
         }
-
     }
 }

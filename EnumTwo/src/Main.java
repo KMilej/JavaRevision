@@ -5,15 +5,14 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("this is calendar");
-        System.out.println();
+        System.out.println("choose a month");
         Scanner scanner = new Scanner(System.in);
-
-        String monthOfTheYear = scanner.nextLine().toUpperCase();
+        String monthChoosen = scanner.nextLine().toUpperCase();
 
         try {
-            Months months = Months.valueOf(monthOfTheYear);
-            System.out.println("The month " + months + " has: " + months.getDays() + " days.");
+            Months months = Months.valueOf(monthChoosen.toUpperCase());
+            int days = months.getDays();
+            System.out.println("the month: " + months + " has " + days + " days.");
         } catch (IllegalArgumentException e) {
             System.out.println("invalid month entered!");
         }

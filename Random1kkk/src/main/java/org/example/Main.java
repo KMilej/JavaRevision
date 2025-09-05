@@ -1,8 +1,7 @@
 package org.example;
 
-import java.time.Duration;
-import java.time.Instant;
-import java.time.Period;
+import java.time.*;
+import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -27,5 +26,17 @@ public class Main {
         Duration duration = Duration.between(before, after);
 
         System.out.println(duration.toMillis());
+
+        // task 2  Local Date Adjusters
+
+        LocalDate teraz = LocalDate.now();
+        System.out.println(teraz);
+//        LocalDate teraz2 = teraz.withYear(2022);
+//        System.out.println(teraz2);
+        LocalDate nextOrSameTuesday = teraz.with(TemporalAdjusters.nextOrSame(DayOfWeek.TUESDAY));
+        LocalDate nextOrSameTuesdayPrevious = teraz.with(TemporalAdjusters.previous(DayOfWeek.TUESDAY));
+        System.out.println(nextOrSameTuesdayPrevious);
+        System.out.println(nextOrSameTuesday);
+
     }
 }
